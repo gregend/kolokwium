@@ -10,6 +10,11 @@ class TestDrawingMethods(unittest.TestCase):
     def test_draw_circle(self):
         self.assertEqual(draw_circle((1,1), 2),[(1,3), (1,-1), (3,1), (-1,1)] )
 
+    def test_vector_move(self):
+        shape = [(1,3), (1,-1), (3,1), (-1,1)]
+        result = [(2,4), (2,0), (4,2), (0,2)]
+        vector = (1,1)
+        self.assertEqual(vector_move(shape, vector), result)
 
 if __name__ == "__main__":
     unittest.main()
