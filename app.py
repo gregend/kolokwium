@@ -4,3 +4,8 @@ def draw_square(coordinates, side_length):
     print("square:")
     print(square)
     return square
+
+def draw_circle(coordinates, radius):
+    x, y = coordinates
+    circle = [(x, y+radius), (x, y-radius), (x+radius, y), (x-radius, y)]
+    return circle
